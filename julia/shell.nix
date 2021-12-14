@@ -6,7 +6,7 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    if [ ! -f "~/.julia/config/startup.jl" ]; then
+    if [ ! -f "$HOME/.julia/config/startup.jl" ]; then
       julia -e 'using Pkg; Pkg.add("OhMyREPL"); Pkg.add("Revise"); Pkg.add("PkgTemplates"); Pkg.add("LanguageServer")'
       mkdir -p ~/.julia/config/ && echo -e "using OhMyREPL\nusing Revise\n" >> ~/.julia/config/startup.jl
     fi
