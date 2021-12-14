@@ -7,6 +7,7 @@ pkgs.mkShell {
 
   shellHook = ''
     julia -e 'using Pkg; Pkg.add("OhMyREPL"); Pkg.add("Revise"); Pkg.add("PkgTemplates")'
+    mkdir -p ~/.julia/config/ && echo -e "using OhMyREPL\nusing Revise\n" >> ~/.julia/config/startup.jl
   '';
 
 }
