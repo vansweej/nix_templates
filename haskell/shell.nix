@@ -6,7 +6,6 @@ pkgs.mkShell {
     pkgs.stack
     pkgs.ghc
     pkgs.haskell-language-server
-    pkgs.stack2nix
   ];
 
   shellHook = ''
