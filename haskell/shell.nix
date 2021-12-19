@@ -5,6 +5,7 @@ pkgs.mkShell {
     pkgs.cabal-install
     pkgs.stack
     pkgs.ghc
+    pkgs.ormolu
     pkgs.haskell-language-server
   ];
 
